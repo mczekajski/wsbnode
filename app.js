@@ -3,7 +3,7 @@ const path = require("path");
 const functions = require("./functions");
 const text = functions.text;
 const server = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 server.set("view engine", "hbs")
 server.use("/assets", express.static(path.join(__dirname,"./assets")))
